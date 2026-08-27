@@ -1,0 +1,137 @@
+/*
+filename: style.css
+authors: Juliette Grove, Ada Yong, Andrea McPadden, Alisla Foley
+created: 27/08/2026
+last modified: 27/08/2026
+description: Stylesheet used for HTML files index.html, jobs.html, apply.html, and about.html.
+*/
+
+
+
+/* Global Styling Section */
+/* e.g. font styling, sizing, background color, etc. anything that we want to be consistent across all pages! */
+/* feel free to change the font btw i just chose a basic one -Alis*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* margin: 0; gets rid of the ugly gap between the webpage content and the edge of the browser */
+    margin: 0;
+
+    /* below is for making the footer stay at the bottom of the page, */
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;   
+}
+
+/* flex: 1; makes sure that the main section takes up all of the space it can. */
+main {
+    flex: 1;
+}
+
+
+
+/* Header Section */
+/* global across all pages, e.g. navigation bar, logo, title */
+
+/* Navigation bar styling*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 50px;
+}
+
+nav ul a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    vertical-align: middle;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+
+    transition: all 0.25s ease;
+}
+
+nav ul a:hover {
+    transform: scale(1.1);
+    color: white;
+    text-decoration: underline;
+
+    /* capsule around the text when hovered */
+    background-color: #77a737;
+}
+
+/* Company logo and text inside navigation bar */
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.25s ease;
+}
+
+.brand img {
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.8));
+}
+
+.brand:hover{
+    transform: scale(1.05);
+}
+
+.brand-text {
+    font-family: monospace;
+}
+.brand-text h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.brand-text p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+
+/* Footer Section */
+/* global across all pages, e.g. the hyperlink styling */
+
+#navFooter {
+    justify-content: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2)  0%, white 40%, white 60%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+
+
+/* index.html Section */
+/* Home page only styling, e.g. special styling for acknowledgement of country*/
+
+
+
+/* jobs.html Section */
+/* Jobs description page only styling, e.g. formatting the job descriptions */
+
+
+
+/* apply.html Section */
+/* Application page only styling, e.g. styling of the form */
+
+
+
+/* about.html Section */
+/* About page only styling, e.g. the group photo */
+
+
+
+/* Media */
