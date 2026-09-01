@@ -36,10 +36,10 @@ main {
 /* Navigation bar styling*/
 nav {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 nav ul {
@@ -81,6 +81,8 @@ nav ul a:hover {
 }
 
 .brand img {
+    width: clamp(80px, 15vw, 200px);
+    height: auto;
     filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.8));
 }
 
@@ -93,15 +95,19 @@ nav ul a:hover {
 }
 .brand-text h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
 .brand-text p {
     margin: 0;
-    font-size: 1rem;
+    font-size: clamp(0.6rem, 2vw, 1.5rem);
 }
 
 
+/* Hamburger styling */
+#menu-toggle, .hamburger {
+    display: none;
+}
 
 /* Footer Section */
 /* global across all pages, e.g. the hyperlink styling */
@@ -135,3 +141,57 @@ nav ul a:hover {
 
 
 /* Media */
+/* For mobile or similar size width tabs */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        margin-right: 20px;
+        
+        border-radius: 30px;
+        padding: 0.5rem 1rem;
+        transition: all 0.25s ease;
+    }
+
+    .hamburger:hover {
+        transform: scale(1.1);
+        color: white;
+        text-decoration: underline;
+
+        background-color: #77a737;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+
+        /* This is for a cool slide down animation!! */
+        max-height: 0; /* starting height */
+        overflow: hidden; /* prevents the links from being visible outside the navigation box while it is animating */
+        opacity: 0;
+        transform: translateY(-10px);
+
+        pointer-events: none; /* stops links from being clicked on while the hamburger is closed/closing */
+
+        transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Shows the navigation links when the hamburger menu is opened */
+    #menu-toggle:checked ~ .nav-links {
+        max-height: 400px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
