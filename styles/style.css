@@ -51,6 +51,25 @@ main {
 
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
 }
+.section-right table {
+    border-collapse: collapse;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+}
+.section-right th {
+    background-color: rgb(235, 246, 173);
+}
+.section-right th, td, tr{
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.2rem 0.4rem;
+
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
+}
+.section-right .tools-table-header {
+    background-color: #b7de85;
+}
 
 
 /* Header Section */
@@ -81,7 +100,7 @@ nav ul a {
     vertical-align: middle;
     border-radius: 30px;
     padding: 0.5rem 1rem;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 4vw, 1.25rem);
 
     transition: all 0.25s ease;
 }
@@ -173,7 +192,7 @@ nav ul a:hover {
 }
 
 #description-section {
-    display:flex;
+    display: flex;
 
     background-image: url('../images/finance_pattern_background.jpg');
     background-size: auto;
@@ -181,7 +200,7 @@ nav ul a:hover {
 }
 
 #customer-satisfaction-section {
-
+    display: flex;
 }
 
 #inclusivity-section {
@@ -258,5 +277,9 @@ nav ul a:hover {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
+    }
+
+    #description-section, #customer-satisfaction-section {
+        display: grid;
     }
 }
