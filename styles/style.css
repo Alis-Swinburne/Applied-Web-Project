@@ -7,13 +7,12 @@ description: Stylesheet used for HTML files index.html, jobs.html, apply.html, a
 */
 
 
-
 /* Global Styling Section */
 /* e.g. font styling, sizing, background color, etc. anything that we want to be consistent across all pages! */
 /* feel free to change the font btw i just chose a basic one -Alis*/
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Play", sans-serif;
     /* margin: 0; gets rid of the ugly gap between the webpage content and the edge of the browser */
     margin: 0;
 
@@ -28,6 +27,30 @@ main {
     flex: 1;
 }
 
+.section-left, .section-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.section-left {
+    border-radius: 14px;
+    align-self: flex-start;
+    background-color: white;
+    margin: 1vw;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+}
+
+.section-right {
+    text-align: center;
+}
+.section-right img {
+    border-radius: 14px;
+    max-width: 100%;
+    height: auto;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+}
 
 
 /* Header Section */
@@ -36,10 +59,12 @@ main {
 /* Navigation bar styling*/
 nav {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 nav ul {
@@ -48,7 +73,6 @@ nav ul {
     list-style: none;
     margin: 50px;
 }
-
 nav ul a {
     display: inline-block;
     text-decoration: none;
@@ -61,7 +85,6 @@ nav ul a {
 
     transition: all 0.25s ease;
 }
-
 nav ul a:hover {
     transform: scale(1.1);
     color: white;
@@ -79,29 +102,32 @@ nav ul a:hover {
     color: black;
     transition: 0.25s ease;
 }
-
 .brand img {
+    width: clamp(80px, 15vw, 200px);
+    height: auto;
     filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.8));
 }
-
 .brand:hover{
     transform: scale(1.05);
 }
 
 .brand-text {
-    font-family: monospace;
+    font-family: "Unica One", sans-serif;
 }
 .brand-text h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
 }
-
 .brand-text p {
     margin: 0;
-    font-size: 1rem;
+    font-size: clamp(0.6rem, 2vw, 1.5rem);
 }
 
 
+/* Hamburger styling */
+#menu-toggle, .hamburger {
+    display: none;
+}
 
 /* Footer Section */
 /* global across all pages, e.g. the hyperlink styling */
@@ -116,6 +142,51 @@ nav ul a:hover {
 
 /* index.html Section */
 /* Home page only styling, e.g. special styling for acknowledgement of country*/
+
+.index-container {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.index-section {
+    width:100%;
+    min-height: 10vh;
+    padding: 1vw;
+    margin: 1vw 0;
+
+    display: grid;
+    align-items: center;
+
+    border-radius: 14px;
+    box-sizing: border-box;
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.index-section h1 {
+    text-align: left;
+    font-size: clamp(0.6rem, 3vw, 2rem);
+}
+.index-section p {
+    font-size: clamp(0.6rem, 2vw, 1.5rem); 
+}
+
+#description-section {
+    display:flex;
+
+    background-image: url('../images/finance_pattern_background.jpg');
+    background-size: auto;
+    background-attachment: fixed; /* really cool static background effect */
+}
+
+#customer-satisfaction-section {
+
+}
+
+#inclusivity-section {
+
+}
 
 
 
@@ -135,3 +206,57 @@ nav ul a:hover {
 
 
 /* Media */
+/* For mobile or similar size width tabs */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        margin-right: 20px;
+        
+        border-radius: 30px;
+        padding: 0.5rem 1rem;
+        transition: all 0.25s ease;
+    }
+
+    .hamburger:hover {
+        transform: scale(1.1);
+        color: white;
+        text-decoration: underline;
+
+        background-color: #77a737;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+
+        background-color: rgba(255, 255, 255, 1);
+        text-align: center;
+
+        /* This is for a cool slide down animation!! */
+        max-height: 0; /* starting height */
+        overflow: hidden; /* prevents the links from being visible outside the navigation box while it is animating */
+        opacity: 0;
+        transform: translateY(-10px);
+
+        pointer-events: none; /* stops links from being clicked on while the hamburger is closed/closing */
+
+        transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Shows the navigation links when the hamburger menu is opened */
+    #menu-toggle:checked ~ .nav-links {
+        max-height: 400px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}

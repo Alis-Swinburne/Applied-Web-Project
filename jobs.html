@@ -8,6 +8,7 @@
     <meta name="description" content="Secure and user-friendly financial technology solutions for digital payments, 
                 budgeting, account management, and financial education.">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Unica+One&display=swap">
     <script src="https://kit.fontawesome.com/8b43896124.js" crossorigin="anonymous"></script>
     <title>FinTech</title>
 </head>
@@ -18,7 +19,6 @@
         <nav>
             <a href="index.html" class="brand">
                 <img src="images/FinTech_logo.png"
-                width="200px"
                 alt="FinTech Logo"
                 title="FinTech Logo"
                 loading="lazy">
@@ -29,7 +29,10 @@
                 </div>
             </a>
 
-            <ul>
+            <input type="checkbox" id="menu-toggle"/>
+            <label for="menu-toggle" class="hamburger"><i class="fa-solid fa-bars"></i></label>
+
+            <ul class="nav-links">
                 <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
                 <li><a href="jobs.html"><i class="fa-solid fa-suitcase"></i> JOBS</a></li>
                 <li><a href="apply.html"><i class="fa-solid fa-pen-to-square"></i> APPLY</a></li>
