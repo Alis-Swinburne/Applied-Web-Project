@@ -43,6 +43,8 @@ main {
 
 .section-right {
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .section-right img {
     border-radius: 14px;
@@ -53,6 +55,8 @@ main {
 }
 .section-right table {
     border-collapse: collapse;
+    margin: auto;
+    background-color: white;
 
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
 }
@@ -201,10 +205,18 @@ nav ul a:hover {
 
 #customer-satisfaction-section {
     display: flex;
+
+    background-image: url('../images/finance_pattern_background.jpg');
+    background-size: auto;
+    background-attachment: fixed;
 }
 
 #inclusivity-section {
+    display: flex;
 
+    background-image: url('../images/finance_pattern_background.jpg');
+    background-size: auto;
+    background-attachment: fixed;
 }
 
 
