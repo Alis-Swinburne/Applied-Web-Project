@@ -43,7 +43,130 @@
     </header>
 
     <main>
-        <!-- Fill this section out for each individual page! -->
+         <h2>Job Application Form</h2>
+         <p>Please fill all required fields to submit your application</p>
+
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+
+            <!-- Job reference number -->
+            <fieldset>
+                <legend>Position</legend>
+                <label for="jobreference">Job Reference Number</label>
+                <input type="text" id="jobreference" name="jobreference" required="required" placeholder="e.g. ABC123"
+                pattern="^[a-zA-Z0-9]{6}$" maxlength="6"> <!-- Exactly 6 alphanumeric characters -->
+            </fieldset>
+
+            <!-- Personal information - first name, last name, birthday, gender -->
+             <fieldset>
+                <legend>Personal Information</legend>
+
+                <!-- First Name -->
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required="required"
+                pattern="^[a-zA-Z]{1,20}$" maxlength="20"> <!-- Maximum 20 alphabetic characters -->
+
+                <!-- Last Name -->
+                 <label for="lastname">Last Name</label>
+                 <input type="text" id="lastname" name="lastname" required="required"
+                pattern="^[a-zA-Z]{1,20}$" maxlength="20"> <!-- Maximum 20 alphabetic characters -->
+
+                <!-- Date of Birth -->
+                 <label for="dob">Date of Birth</label>
+                 <input type="text" id="dob" name="dob" required="required" placeholder="DD/MM/YYYY"
+                 pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$"> <!-- dd/mm/yyyy -->
+
+                 <!-- Gender -->
+                  <label for="gender">Gender</label>
+
+                  <input type="radio" id="female" name="gender" value="female" required="required">
+                  <label for="female">Female</label>
+
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label>
+
+                  <input type="radio" id="nonbinary" name="gender" value="non-binary">
+                  <label for="nonbinary">Non-binary</label>
+
+                  <input type="radio" id="prefernot" name="gender" value="prefernot">
+                  <label for="prefernot">Prefer not to say</label>
+             </fieldset>
+
+            <!-- Address - street, suburb, state, postcode -->
+             <fieldset>
+                <legend>Address</legend>
+
+                <!-- Street Address -->
+                <label for="streetaddress">Street Address</label>
+                <input type="text" id="streetaddress" name="streetaddress" required="required"
+                maxlength="40"> <!-- Maximum 40 characters -->
+
+                <!-- Suburb / Town -->
+                <label for="suburb">Suburb / Town</label>
+                <input type="text" id="suburb" name="suburb"  required="required"
+                 maxlength="40"> <!-- Maximum 40 characters -->
+
+                <!-- State -->
+                <label for="state">State</label>
+                    <select name="state" id="state" required="required">
+                        <option value="">Please select</option>
+                        <option value="vic">VIC</option>
+                        <option value="nsw">NSW</option>
+                        <option value="qld">QLD</option>
+                        <option value="nt">NT</option>
+                        <option value="wa">WA</option>
+                        <option value="sa">SA</option>
+                        <option value="tas">TAS</option>
+                        <option value="act">ACT</option>
+                  </select>
+
+                  <!-- Postcode -->
+                   <label for="postcode">Postcode</label>
+                   <input type="text" id="postcode" name="postcode" required="required" 
+                   pattern="^[0-9]{4}$" maxlength="4"> <!-- Exactly 4 digits -->
+             </fieldset>
+
+             <!-- Contact details - phone number, email -->
+             <fieldset>
+                <legend>Contact Details</legend>
+
+                <!-- Phone number -->
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" required="required"
+                pattern="^[0-9]{8,12}$" maxlength="12"> <!-- 8–12 digits -->
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required="required" placeholder="example@email.com"> <!-- Valid email format -->
+             </fieldset>
+
+             <!-- Skills -->
+              <fieldset>
+                <legend>Professional Skills</legend>
+
+                <!-- Skills list -->
+                <input type="checkbox" name="skills[]" id="cybersecurity" value="cybersecurity">
+                <label for="cybersecurity">Cybersecurity</label>
+
+                <input type="checkbox" name="skills[]" id="webdevelopment" value="web_development">
+                <label for="webdevelopment">Web Development</label>
+
+                <input type="checkbox" name="skills[]" id="sqldatabase" value="sql_database">
+                <label for="sqldatabase">SQL & Databases</label>
+
+                <input type="checkbox" name="skills[]" id="cloudcicd" value="cloud_cicd">
+                <label for="cloudcicd">Cloud & CI/CD</label>
+
+                <input type="checkbox" name="skills[]" id="problemsolving" value="problem_solving">
+                <label for="problemsolving">Problem Solving</label>
+
+                <!-- Other skills -->
+                <label for="otherskills">Other Skills</label>
+                <textarea name="otherskills" id="otherskills" rows="5" cols="40" placeholder="List any other relevant skills (optional)"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
     </main>
 
     <footer>
