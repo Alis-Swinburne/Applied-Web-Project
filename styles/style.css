@@ -407,4 +407,10 @@ nav ul a:hover {
     #description-section, #customer-satisfaction-section {
         display: grid;
     }
+
+     /* Job form fields */
+     .form-row, .form-row-three {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
