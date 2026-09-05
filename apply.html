@@ -61,34 +61,41 @@
                 <legend>Personal Information</legend>
 
                 <!-- First Name -->
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstname" name="firstname" required="required"
-                pattern="^[a-zA-Z]{1,20}$" maxlength="20"> <!-- Maximum 20 alphabetic characters -->
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required="required"
+                        pattern="^[a-zA-Z]{1,20}$" maxlength="20"> <!-- Maximum 20 alphabetic characters -->
+                    </div>
 
-                <!-- Last Name -->
-                 <label for="lastname">Last Name</label>
-                 <input type="text" id="lastname" name="lastname" required="required"
-                pattern="^[a-zA-Z]{1,20}$" maxlength="20"> <!-- Maximum 20 alphabetic characters -->
+                    <!-- Last Name -->
+                    <div class="form-field">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required="required"
+                        pattern="^[a-zA-Z]{1,20}$" maxlength="20"> <!-- Maximum 20 alphabetic characters -->
+                    </div>
+                </div>
 
-                <!-- Date of Birth -->
-                 <label for="dob">Date of Birth</label>
-                 <input type="text" id="dob" name="dob" required="required" placeholder="DD/MM/YYYY"
-                 pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$"> <!-- dd/mm/yyyy -->
+                    <!-- Date of Birth -->
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" id="dob" name="dob" required="required" placeholder="DD/MM/YYYY"
+                    pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$"> <!-- dd/mm/yyyy -->
 
-                 <!-- Gender -->
-                  <label for="gender">Gender</label>
 
-                  <input type="radio" id="female" name="gender" value="female" required="required">
-                  <label for="female">Female</label>
+                    <!-- Gender -->
+                    <label for="gender">Gender</label>
 
-                  <input type="radio" id="male" name="gender" value="male">
-                  <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required="required">
+                    <label for="female">Female</label>
 
-                  <input type="radio" id="nonbinary" name="gender" value="non-binary">
-                  <label for="nonbinary">Non-binary</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
 
-                  <input type="radio" id="prefernot" name="gender" value="prefernot">
-                  <label for="prefernot">Prefer not to say</label>
+                    <input type="radio" id="nonbinary" name="gender" value="non-binary">
+                    <label for="nonbinary">Non-binary</label>
+
+                    <input type="radio" id="prefernot" name="gender" value="prefernot">
+                    <label for="prefernot">Prefer not to say</label>
              </fieldset>
 
             <!-- Address - street, suburb, state, postcode -->
@@ -101,28 +108,37 @@
                 maxlength="40"> <!-- Maximum 40 characters -->
 
                 <!-- Suburb / Town -->
-                <label for="suburb">Suburb / Town</label>
-                <input type="text" id="suburb" name="suburb"  required="required"
-                 maxlength="40"> <!-- Maximum 40 characters -->
+                <div class="form-row-three">
+                    <div class="form-field">
+                        <label for="suburb">Suburb / Town</label>
+                        <input type="text" id="suburb" name="suburb"  required="required"
+                        maxlength="40"> <!-- Maximum 40 characters -->
+                    </div>
 
-                <!-- State -->
-                <label for="state">State</label>
-                    <select name="state" id="state" required="required">
-                        <option value="">Please select</option>
-                        <option value="vic">VIC</option>
-                        <option value="nsw">NSW</option>
-                        <option value="qld">QLD</option>
-                        <option value="nt">NT</option>
-                        <option value="wa">WA</option>
-                        <option value="sa">SA</option>
-                        <option value="tas">TAS</option>
-                        <option value="act">ACT</option>
-                  </select>
 
-                  <!-- Postcode -->
-                   <label for="postcode">Postcode</label>
-                   <input type="text" id="postcode" name="postcode" required="required" 
-                   pattern="^[0-9]{4}$" maxlength="4"> <!-- Exactly 4 digits -->
+                    <!-- State -->
+                    <div class="form-field">
+                        <label for="state">State</label>
+                            <select name="state" id="state" required="required">
+                                <option value="">Please select</option>
+                                <option value="vic">VIC</option>
+                                <option value="nsw">NSW</option>
+                                <option value="qld">QLD</option>
+                                <option value="nt">NT</option>
+                                <option value="wa">WA</option>
+                                <option value="sa">SA</option>
+                                <option value="tas">TAS</option>
+                                <option value="act">ACT</option>
+                        </select>
+                    </div>
+
+                    <!-- Postcode -->
+                    <div class="form-field">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" name="postcode" required="required" 
+                        pattern="^[0-9]{4}$" maxlength="4"> <!-- Exactly 4 digits -->
+                    </div>
+                </div>
              </fieldset>
 
              <!-- Contact details - phone number, email -->
