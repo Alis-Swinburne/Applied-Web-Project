@@ -229,6 +229,119 @@ nav ul a:hover {
 /* apply.html Section */
 /* Application page only styling, e.g. styling of the form */
 
+/* Main form container */
+#job-form {
+    margin: 2rem auto;
+    max-width: 850px;
+    padding: 1.75rem;
+    border-radius: 15px;
+    background-color: white;
+}
+
+/* Form sections */
+#job-form fieldset {
+    border: none;
+    border-top: 1px solid lightgray;
+    margin: 1.5rem;
+}
+
+/* Form headings */
+#job-form legend {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Labels and form inputs */
+#job-form label {
+    font-weight: bold;
+}
+
+#job-form input, #job-form select, #job-form textarea {
+    padding: 0.75rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.radio-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+#job-form .radio-checkbox label {
+    font-weight: normal;
+}
+
+/* Green focus effect */
+#job-form input:focus,
+#job-form select:focus,
+#job-form textarea:focus {
+    outline: none;
+    border-color: #577331;
+}
+
+#job-form .radio-checkbox input[type="radio"],
+#job-form .radio-checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    accent-color:#577331;
+}
+
+/* Form row layouts */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+}
+
+.form-row-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    box-sizing: border-box;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form buttons */
+#job-form input[type="submit"], 
+#job-form input[type="reset"] {
+    font-weight: bold;
+    width: 10em;
+    height: 3rem;
+    margin: 0.5rem
+}
+
+#job-form input[type="submit"] {
+    background-color: #77a737;
+    color:white;
+}
+ 
+#job-form input[type="submit"]:hover {
+    background-color: #577331;
+}
+
+#job-form input[type="reset"] {
+    background-color: #d8d9d7;
+}
+
+ 
+#job-form input[type="reset"]:hover {
+    background-color: #a0a19f;
+}
+
 
 
 /* about.html Section */
