@@ -85,6 +85,7 @@ nav {
     position: relative;
     align-items: center;
     justify-content: space-between;
+    z-index: 1; /* was being hidden behind the hero image */
 
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
     background-color: rgba(255, 255, 255, 1);
@@ -141,10 +142,6 @@ nav ul a:hover {
     margin: 0;
     font-size: clamp(1.5rem, 4vw, 3rem);
 }
-.brand-text p {
-    margin: 0;
-    font-size: clamp(0.6rem, 2vw, 1.5rem);
-}
 
 
 /* Hamburger styling */
@@ -195,10 +192,129 @@ nav ul a:hover {
     font-size: clamp(0.6rem, 2vw, 1.5rem); 
 }
 
+.hero-image {
+    /* Stock photo from: https://unsplash.com/photos/mother-and-child-running-on-beach-at-sunset--46JdCBSpDI */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../images/index/hero-image.jpg");
+
+    min-height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hero-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    font-weight: bold;
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: clamp(0.75rem, 4vw, 1.25rem);
+
+    transition: all 0.25s ease;
+}
+.hero-text a:hover {
+    transform: scale(1.1);
+    color: white;
+    text-decoration: underline;
+
+    /* capsule around the text when hovered */
+    background-color: #77a737;
+}
+.hero-text h1 {
+    text-shadow: 4px 4px 4px black;
+}
+.hero-text h2 {
+    padding-top: 10vh;
+    text-shadow: 2px 2px 4px black;
+    font-size: clamp(0.2rem, 3vw, 2rem);
+}
+
+.hover-icon {
+    display: inline-grid;
+    place-items: center;
+    min-width: 4ch;
+    cursor: default;
+}
+.hover-icon .icon, .hover-icon .word { /* Found a cool text shimmer effect from this website: https://edwardsturm.com/articles/how-to-make-animated-shiny-text-with-css/#here */
+    grid-area: 1/1;
+    text-shadow: none; /* the shadow was making a weird effect? */
+    transition: all 0.25s ease;
+}
+.hover-icon .word {
+    -webkit-text-stroke: 0;
+    background: linear-gradient(135deg, #ffffff, #77a737, #ffffff, #77a737);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    animation: text-gradient 3s linear infinite;
+}
+.hover-icon .icon { /* the icons wouldn't take the effect above so used color change instead */
+    opacity: 0;
+    transform: scale(0.7);
+
+    animation: icon-color 3s linear infinite;
+}
+.hover-icon:hover .word {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.7);
+}
+.hover-icon:hover .icon {
+    opacity: 1;
+    transform: translateY(-6px) scale(1);
+}
+@keyframes text-gradient {
+    0% {
+        background-position: 100% 50%;
+    }
+    30% {
+        background-position: 0% 50%;
+    }
+    70% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes icon-color {
+    0% {
+        color: #ffffff;
+    }
+    33% {
+        color: #77a737;
+    }
+    66% {
+        color: #77a737;
+    }
+    100% {
+        color: #ffffff;
+    }
+}
+
 #description-section {
     display: flex;
 
-    background-image: url('../images/finance_pattern_background.jpg');
+    background-image: url('../images/index/finance_pattern_background.jpg');
     background-size: auto;
     background-attachment: fixed; /* really cool static background effect */
 }
@@ -206,7 +322,7 @@ nav ul a:hover {
 #customer-satisfaction-section {
     display: flex;
 
-    background-image: url('../images/finance_pattern_background.jpg');
+    background-image: url('../images/index/finance_pattern_background.jpg');
     background-size: auto;
     background-attachment: fixed;
 }
@@ -214,7 +330,7 @@ nav ul a:hover {
 #inclusivity-section {
     display: flex;
 
-    background-image: url('../images/finance_pattern_background.jpg');
+    background-image: url('../images/index/finance_pattern_background.jpg');
     background-size: auto;
     background-attachment: fixed;
 }
