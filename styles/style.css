@@ -2,7 +2,7 @@
 filename: style.css
 authors: Juliette Grove, Ada Yong, Andrea McPadden, Alisla Foley
 created: 27/08/2026
-last modified: 27/08/2026
+last modified: 09/09/2026
 description: Stylesheet used for HTML files index.html, jobs.html, apply.html, and about.html.
 */
 
@@ -285,6 +285,7 @@ nav ul a:hover {
 #job-form textarea:focus {
     outline: none;
     border-color: #577331;
+    resize: vertical;
 }
 
 #job-form .radio-checkbox input[type="radio"],
@@ -299,7 +300,6 @@ nav ul a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    margin-bottom: 1.5rem;
     box-sizing: border-box;
 }
 
@@ -310,16 +310,11 @@ nav ul a:hover {
     box-sizing: border-box;
 }
 
-.form-field {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Form buttons */
 #job-form input[type="submit"], 
 #job-form input[type="reset"] {
     font-weight: bold;
-    width: 10em;
+    width: 10rem;
     height: 3rem;
     margin: 0.5rem
 }
