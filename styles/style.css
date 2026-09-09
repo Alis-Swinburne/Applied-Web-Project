@@ -22,6 +22,15 @@ body {
     min-height: 100dvh;   
 }
 
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap
+}
+
 /* flex: 1; makes sure that the main section takes up all of the space it can. */
 main {
     flex: 1;
@@ -380,7 +389,7 @@ nav ul a:hover {
     margin-bottom: 1.5rem;
     width: 100%;
     box-sizing: border-box;
-
+    resize: vertical;
 }
 
 .radio-checkbox {
@@ -401,7 +410,6 @@ nav ul a:hover {
 #job-form textarea:focus {
     outline: none;
     border-color: #577331;
-    resize: vertical;
 }
 
 #job-form .radio-checkbox input[type="radio"],
@@ -436,12 +444,12 @@ nav ul a:hover {
 }
 
 #job-form input[type="submit"] {
-    background-color: #77a737;
+    background-color: #046007;
     color:white;
 }
  
 #job-form input[type="submit"]:hover {
-    background-color: #577331;
+    background-color: #033604;
 }
 
 #job-form input[type="reset"] {
