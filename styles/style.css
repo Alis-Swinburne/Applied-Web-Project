@@ -576,12 +576,9 @@ nav ul a:hover {
 /* Style the about-table borders pink */
 .about-table {
     border-collapse: collapse;
-    border: 2px solid #FFC0CB;
+    border: 2px solid #FFC0CB; /* Light pink border */
 }
-.about-table caption {
-    font-weight: bold;
-    color: #FF69B4; 
-}
+
 
 
 /* Media */
