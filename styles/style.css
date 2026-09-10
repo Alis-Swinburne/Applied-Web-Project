@@ -184,7 +184,7 @@ nav ul a:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
     background-color: rgba(255, 255, 255, 1);
 }
-.index-section h1 {
+.index-section h3 {
     text-align: left;
     font-size: clamp(0.6rem, 3vw, 2rem);
 }
@@ -236,10 +236,10 @@ nav ul a:hover {
     /* capsule around the text when hovered */
     background-color: #77a737;
 }
-.hero-text h1 {
+.hero-text h2 {
     text-shadow: 4px 4px 4px black;
 }
-.hero-text h2 {
+.hero-text h3 {
     padding-top: 10vh;
     text-shadow: 2px 2px 4px black;
     font-size: clamp(0.2rem, 3vw, 2rem);
