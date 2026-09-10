@@ -14,6 +14,16 @@
 </head>
 
 <body>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #FFFFF0; /* Ivory background */
+        }
+
+    </style>
+
     <header>
         <!-- Contains the company logo, name, and a navigation menu. -->
         <nav>
@@ -29,8 +39,11 @@
                 </div>
             </a>
 
-            <input type="checkbox" id="menu-toggle"/>
-            <label for="menu-toggle" class="hamburger"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span class="sr-only">Toggle navigation menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </label>
 
             <ul class="nav-links">
                 <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
@@ -44,7 +57,7 @@
 
     <main>
         <section class="intro-section">
-            <h2>Current Career Opportunities</h2>
+            <h2 style="color: black; text-align:left">Current Career Opportunities</strong></h2> 
             <p>Join the FinTech team &amp; shape the future of digital banking and personal finance technology</p>
             
             <!-- Quick Navigation Directory -->
@@ -52,16 +65,16 @@
                 <h3>Open Positions Overview</h3>
                 <p>Click on a job title below to jump directly to the position details:</p>
                 <ul>
-                    <li><a href="#DEV042">Senior Full Stack Developer (Ref: DEV042)</a></li>
-                    <li><a href="#SEC918">Cybersecurity Analyst (Ref: SEC918)</a></li>
-                    <li><a href="#DAT551">Financial Data Analyst (Ref: DAT551)</a></li>
+                    <li>Senior Full Stack Developer (Ref: DEV042)</li>
+                    <li>Cybersecurity Analyst (Ref: SEC918)</li>
+                    <li>Financial Data Analyst (Ref: DAT551)</li>
                 </ul>
             </section>
         </section>
 
         <aside class="perks-sidebar">
-            <h3>Why Worth at Fintech?</h3>
-            <p>We beliece our employees do their best work when they feel supported, challenged and rewarded.</p>
+            <h3>Why work at Fintech?</h3>
+            <p>We believe our employees do their best work when they feel supported, challenged and rewarded.</p>
             <ul>
                 <li><strong>Flexible Work:</strong> Hybrid and fully remote work options.</li>
                 <li><strong>Learning &amp; Development:</strong> $2000 annial budget per employee for courses and certifications.</li>
