@@ -13,7 +13,7 @@ description: Stylesheet used for HTML files index.html, jobs.html, apply.html, a
 
 body {
     font-family: "Play", sans-serif;
-    /* margin: 0; gets rid of the ugly gap between the webpage content and the edge of the browser */
+    /* gets rid of the ugly gap between the webpage content and the edge of the browser */
     margin: 0;
 
     /* below is for making the footer stay at the bottom of the page, */
@@ -31,7 +31,7 @@ body {
   white-space: nowrap
 }
 
-/* flex: 1; makes sure that the main section takes up all of the space it can. */
+/* makes sure that the main section takes up all of the space it can. */
 main {
     flex: 1;
 }
@@ -172,6 +172,12 @@ nav ul a:hover {
 /* index.html Section */
 /* Home page only styling, e.g. special styling for acknowledgement of country*/
 
+#index-main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
 .index-container {
     display: grid;
     gap: 1rem;
@@ -193,7 +199,7 @@ nav ul a:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
     background-color: rgba(255, 255, 255, 1);
 }
-.index-section h1 {
+.index-section h3 {
     text-align: left;
     font-size: clamp(0.6rem, 3vw, 2rem);
 }
@@ -245,10 +251,10 @@ nav ul a:hover {
     /* capsule around the text when hovered */
     background-color: #77a737;
 }
-.hero-text h1 {
+.hero-text h2 {
     text-shadow: 4px 4px 4px black;
 }
-.hero-text h2 {
+.hero-text h3 {
     padding-top: 10vh;
     text-shadow: 2px 2px 4px black;
     font-size: clamp(0.2rem, 3vw, 2rem);
