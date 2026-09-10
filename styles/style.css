@@ -577,9 +577,6 @@ nav ul a:hover {
 .about-table {
     border-collapse: collapse;
     border: 2px solid #FFC0CB;
-.about-table td {
-    border: 2px solid #FFC0CB; 
-    padding: 0.5em;
 }
 .about-table caption {
     font-weight: bold;
