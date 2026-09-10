@@ -13,7 +13,7 @@ description: Stylesheet used for HTML files index.html, jobs.html, apply.html, a
 
 body {
     font-family: "Play", sans-serif;
-    /* margin: 0; gets rid of the ugly gap between the webpage content and the edge of the browser */
+    /* gets rid of the ugly gap between the webpage content and the edge of the browser */
     margin: 0;
 
     /* below is for making the footer stay at the bottom of the page, */
@@ -31,7 +31,7 @@ body {
   white-space: nowrap
 }
 
-/* flex: 1; makes sure that the main section takes up all of the space it can. */
+/* makes sure that the main section takes up all of the space it can. */
 main {
     flex: 1;
 }
@@ -171,6 +171,12 @@ nav ul a:hover {
 
 /* index.html Section */
 /* Home page only styling, e.g. special styling for acknowledgement of country*/
+
+#index-main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
 
 .index-container {
     display: grid;
