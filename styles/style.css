@@ -573,10 +573,6 @@ nav ul a:hover {
 
 /* about.html Section */
 /* About page only styling, e.g. the group photo */
-.student-number:hover {
-    transform: scale(1.1);
-    color: pink;
-}
 
 
 /* Media */
