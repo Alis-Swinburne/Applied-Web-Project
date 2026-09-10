@@ -573,6 +573,19 @@ nav ul a:hover {
 
 /* about.html Section */
 /* About page only styling, e.g. the group photo */
+/* Style the about-table borders pink */
+#about-table {
+    border-collapse: collapse;
+    border: 2px solid #FFC0CB; /* Light pink border */
+}
+#about-table td {
+    border: 2px solid #FFC0CB; /* Pink cell borders */
+    padding: 0.5em;
+}
+#about-table caption {
+    font-weight: bold;
+    color: #FF69B4; /* Hot pink text */
+}
 
 
 /* Media */
