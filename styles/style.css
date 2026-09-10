@@ -573,16 +573,15 @@ nav ul a:hover {
 
 /* about.html Section */
 /* About page only styling, e.g. the group photo */
-
-.about-table {
+#about-table {
     border-collapse: collapse;
     margin: auto;
-    background-color: pink;
+    background-color: #FFC0CB; 
 }
     
-.about-table caption {
+#about-table caption {
     font-weight: bold;
-    color: white;
+    color: #FFFFFF;
 }
 
 
