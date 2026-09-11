@@ -448,7 +448,7 @@ main {
 
         .apply-btn {
             display: inline-block;
-            background-color: #3182ce; /* Blue background for the apply button */
+            background-color: #1b70bf; /* Blue background for the apply button */
             color: #ffffff; /* White text for contrast */
             padding: 10px 20px;
             text-decoration: none;
@@ -458,7 +458,7 @@ main {
         }
 
         .apply-btn:hover {
-            background-color: #2b6cb0; /* Darker blue on hover for feedback */
+            background-color: #15548f; /* Darker blue on hover for feedback */
         }
 
 /* apply.html Section */
@@ -576,7 +576,7 @@ main {
 /* about.html Section */
 /* About page only styling, e.g. the group photo */
 #about-table {
-    border: 1;
+    border: 1px;
     border-collapse: collapse;
     margin: auto;
     background-color: #FCE3E8; 
