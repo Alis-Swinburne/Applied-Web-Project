@@ -355,16 +355,15 @@ nav ul a:hover {
 /* jobs.html Section */
 /* Jobs description page only styling, e.g. formatting the job descriptions */
 
-
-        main {
+main {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
 
         .intro-section {
-            background-color: #ffffff; /* White background */
-            border: 1px solid #dcdcdc; /* Light gray border */
+            background-color: #ffffff; 
+            border: 1px solid #dcdcdc; 
             border-radius: 8px;
             padding: 24px;
             margin-bottom: 25px;
@@ -374,8 +373,8 @@ nav ul a:hover {
         .job-directory {
             margin-top: 15px;
             padding: 15px 20px;
-            background-color: #f4fbfd; /* Light cyan background */
-            border-left: 4px solid #70b8c4; /* Teal border */
+            background-color: #f4fbfd; 
+            border-left: 4px solid #70b8c4; 
             border-radius: 4px;
         }
 
@@ -384,70 +383,73 @@ nav ul a:hover {
             padding-left: 20px;
         }
 
-        .job-directory li {
-            color: #000000; /* Black */
+        .job-directory li,
+        .job-directory a {
+            color: #000000; 
             text-decoration: none;
-            font-width: bold;
+            font-weight: bold; /* Note: Changed font-width to font-weight */
         }
 
-        .job a:hover {
+        .job-directory a:hover {
             text-decoration: underline;
         }
 
-        .perks-sidepar {
-            background-color: #f0f7f4; /* Light mint background */
-            border: 1px dashed #70b8c4; /* Teal dashed border */
+        /* Fixed typo from .perks-sidepar to .perks-sidebar */
+        .perks-sidebar {
+            background-color: #ffffff; /* White Background */
+            border: 1px dashed #70b8c4; /* Dashed border for visual distinction */
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 35px;
+            margin-bottom: 25px; /* Reduced from 35px since it's now inside the main box */
+            margin-top: 20px;
         }
 
         .job-card {
-            background-color: #ffffff; /* White background */
-            border: 2px solid #e0e0e0;
+            background-color: #ffffff; /* White background for the job card */
+            border: 2px solid #e0e0e0; /* Light gray border for subtle separation */
             border-radius: 10px;
             padding: 30px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); /* Subtle shadow */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);  /* Soft shadow for depth */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; 
         }
 
         .job-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover for emphasis */
         }
 
         .job-card > header {
-            background-color: #f8fafb; /* Very light gray background */
+            background-color: #f8fafb; /* Light background for the header */
             padding: 15px 20px;
             margin: -30px -30px 20px -30px;
-            border-bottom: 2px solid #bee1e6; /* Teal border */
+            border-bottom: 2px solid #bee1e6; /* Subtle border to separate header from content */
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
 
         .job-card h3 {
             margin-top: 0;
-            color: #1a365d; /* Dark blue text */
+            color: #1a365d; /* Dark blue for the job title */
             font-size: 1.5em;
         }
 
         .job-card section {
             margin-top: 20px;
             padding-top: 15px;
-            border-top: 1px solid #f0f0f0; /* Light gray border */
+            border-top: 1px solid #f0f0f0; /* Light border to separate sections */
         }
 
         .job-card .apply-link-container {
             margin-top: 25px;
             padding-top: 15px;
-            border-top: 1px solid #e0e0e0; /* Light gray border */
+            border-top: 1px solid #e0e0e0; /* Light border to separate the apply link */
         }
 
         .apply-btn {
             display: inline-block;
-            background-color: #3182ce; /* Blue background */
-            color: #ffffff; /* White text */
+            background-color: #3182ce; /* Blue background for the apply button */
+            color: #ffffff; /* White text for contrast */
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
@@ -456,7 +458,7 @@ nav ul a:hover {
         }
 
         .apply-btn:hover {
-            background-color: #2b6cb0; /* Darker blue on hover */
+            background-color: #2b6cb0; /* Darker blue on hover for feedback */
         }
 
 /* apply.html Section */
