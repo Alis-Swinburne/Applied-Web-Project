@@ -575,6 +575,18 @@ main {
 
 /* about.html Section */
 /* About page only styling, e.g. the group photo */
+#about-table {
+    border-collapse: collapse;
+    margin: auto;
+    background-color: #FFC0CB; 
+}
+    
+#about-table caption {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+
 
 
 /* Media */
