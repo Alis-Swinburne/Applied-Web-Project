@@ -576,6 +576,7 @@ main {
 /* about.html Section */
 /* About page only styling, e.g. the group photo */
 #about-table {
+    border: 1;
     border-collapse: collapse;
     margin: auto;
     background-color: #FFC0CB; 
